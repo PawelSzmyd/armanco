@@ -1,0 +1,198 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="container hero-content">
+    <p class="hero-eyebrow">Krosno i okolice · woj. podkarpackie</p>
+    <h1 class="hero-title">
+      ARMANCO<br />
+      <span class="hero-title-sub">Sp. z o.o.</span>
+    </h1>
+    <p class="hero-ticker">
+      KOPARKI&nbsp;&nbsp;//&nbsp;&nbsp;ROBOTY ZIEMNE&nbsp;&nbsp;//&nbsp;&nbsp;KOSTKA BRUKOWA&nbsp;&nbsp;//&nbsp;&nbsp;PRZYŁĄCZA&nbsp;&nbsp;//&nbsp;&nbsp;FUNDAMENTY&nbsp;&nbsp;//&nbsp;&nbsp;ODWODNIENIA&nbsp;&nbsp;//&nbsp;&nbsp;ODŚNIEŻANIE
+    </p>
+    <div class="hero-actions">
+      <a href="#uslugi" class="btn-primary">Nasze usługi</a>
+      <a href="#kontakt" class="btn-secondary">Skontaktuj się</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Przewiń</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 72px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/92253f8ef79d88c9f891b9da17272d81.jpg-N0F1Iv52GC9FXjY69BifB9ifk3KaCp.png')
+      center/cover no-repeat;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(15,15,15,0.92) 0%,
+      rgba(15,15,15,0.75) 50%,
+      rgba(15,15,15,0.88) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 12vw, 9rem);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 1rem;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .hero-title-sub {
+    font-size: 0.38em;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+  }
+
+  .hero-ticker {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-left: 2px solid var(--gold);
+    padding-left: 1rem;
+    margin: 2rem 0 3rem;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .btn-primary {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 0.85rem 2.2rem;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--text);
+    padding: 0.85rem 2.2rem;
+    transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 2;
+    animation: fadeIn 1s 1s ease both;
+  }
+
+  .hero-scroll span {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s ease infinite;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  @media (max-width: 640px) {
+    .hero-ticker { font-size: 0.65rem; }
+  }
+</style>

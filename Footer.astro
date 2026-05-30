@@ -1,0 +1,151 @@
+---
+const currentYear = new Date().getFullYear();
+
+const services = [
+  "Koparki",
+  "Roboty ziemne",
+  "Układanie kostki brukowej",
+  "Przyłącza",
+  "Fundamenty",
+  "Odwodnienia",
+  "Odśnieżanie",
+];
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/92253f8ef79d88c9f891b9da17272d81.jpg-N0F1Iv52GC9FXjY69BifB9ifk3KaCp.png"
+          alt="ARMANCO"
+          width="160"
+          height="40"
+          class="footer-logo"
+        />
+        <p class="footer-address">
+          ARMANCO Sp. z o.o.<br />
+          ul. Lwowska 17<br />
+          38-400 Krosno<br />
+          woj. podkarpackie
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Kontakt</h4>
+        <ul class="footer-list">
+          <li>
+            <a href="tel:+48531102100" class="footer-link">+48 531 102 100</a>
+          </li>
+          <li>
+            <a href="mailto:bok@armanco.pl" class="footer-link">bok@armanco.pl</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Usługi</h4>
+        <ul class="footer-list">
+          {services.map((s) => <li>{s}</li>)}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-legal">
+        NIP: 6842641464 &nbsp;|&nbsp; REGON: 36269853700000 &nbsp;|&nbsp; KRS: 0000579720
+      </p>
+      <p class="footer-copy">© {currentYear} ARMANCO Sp. z o.o.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--dark-2);
+    padding: 5rem 0 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-logo {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-address {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  .footer-heading {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-list li {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+
+  .footer-link {
+    color: var(--text-muted);
+    transition: color 0.2s;
+  }
+
+  .footer-link:hover { color: var(--gold); }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-legal,
+  .footer-copy {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand { grid-column: 1 / -1; }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>

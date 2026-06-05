@@ -1,0 +1,7 @@
+const currentYear = new Date().getFullYear();
+
+const services = [
+  "Koparki",
+  "Roboty ziemne",
+  "Układanie kostki brukowej",
+  "Przyłącza",
